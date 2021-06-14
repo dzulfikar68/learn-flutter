@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'input.dart';
+import 'image.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: InputScreen());
+        theme: ThemeData(fontFamily: "Oswald", primarySwatch: Colors.blue),
+        home: ImageScreen());
   }
 }
