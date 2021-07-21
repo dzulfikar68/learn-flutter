@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var informationTextStyle = TextStyle(fontFamily: 'Oxygen');
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -15,7 +16,11 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   "Farm House Lembang",
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontFamily: 'Staatliches',
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Container(
@@ -29,7 +34,10 @@ class DetailScreen extends StatelessWidget {
                         SizedBox(
                           height: 8.0,
                         ),
-                        Text("Open Everyday"),
+                        Text(
+                          "Open Everyday",
+                          style: informationTextStyle,
+                        ),
                       ],
                     ),
                     Column(
@@ -38,7 +46,10 @@ class DetailScreen extends StatelessWidget {
                         SizedBox(
                           height: 8.0,
                         ),
-                        Text("09:00 - 20:00"),
+                        Text(
+                          "09:00 - 20:00",
+                          style: informationTextStyle,
+                        ),
                       ],
                     ),
                     Column(
@@ -47,7 +58,10 @@ class DetailScreen extends StatelessWidget {
                         SizedBox(
                           height: 8.0,
                         ),
-                        Text("Rp 25.000"),
+                        Text(
+                          "Rp 25.000",
+                          style: informationTextStyle,
+                        ),
                       ],
                     ),
                   ],
@@ -66,12 +80,30 @@ class DetailScreen extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Image.network(
-                        "https://media-cdn.tripadvisor.com/media/photo-s/0d/7c/59/70/farmhouse-lembang.jpg"),
-                    Image.network(
-                        "https://media-cdn.tripadvisor.com/media/photo-w/13/f0/22/f6/photo3jpg.jpg"),
-                    Image.network(
-                        "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg")
+                    Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                            "https://media-cdn.tripadvisor.com/media/photo-s/0d/7c/59/70/farmhouse-lembang.jpg"),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                            "https://media-cdn.tripadvisor.com/media/photo-w/13/f0/22/f6/photo3jpg.jpg"),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                            "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg"),
+                      ),
+                    ),
                   ],
                 ),
               ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'image.dart';
+import 'package:hello_world/responsivegeneratelayout.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(fontFamily: "Oswald", primarySwatch: Colors.blue),
-        home: ImageScreen());
+        home: ResponsiveGenerateLayout());
   }
 }
